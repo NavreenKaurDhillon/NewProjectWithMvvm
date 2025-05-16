@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp"
+    android:background="@drawable/flag_transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_25sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_6sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_text_border"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_18sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/block"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:background="@color/black_20"/>
+
+
+
+            <TextView
+                android:id="@+id/tvReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/report"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:background="@color/black_20"/>
+
+            <TextView
+                android:id="@+id/tvClearChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/clear_chat"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

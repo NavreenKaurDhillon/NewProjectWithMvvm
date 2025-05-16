@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black_50"
+            android:textSize="@dimen/_8sdp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="4:00 PM"
+            android:visibility="gone"
+            android:textColor="@color/black_50"
+            android:textSize="@dimen/_8ssp" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewReceived"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfile1"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:shapeAppearance="@style/Circle"
+            android:src="@drawable/gray_male"
+            android:background="@color/white"
+            android:elevation="@dimen/_1sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/messageLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@+id/ivProfile1"
+            app:layout_constraintTop_toTopOf="@+id/ivProfile1" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black_20"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="@dimen/_10sdp"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sentIV2"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/home_pic"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:shapeAppearance="@style/CornerCut"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvReceivedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="@dimen/_8sdp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/messageLL"
+            app:layout_constraintTop_toBottomOf="@+id/messageLL" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfile2"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:shapeAppearance="@style/Circle"
+            android:src="@drawable/gray_female"
+            android:elevation="@dimen/_1sdp"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/messageLL2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@+id/ivProfile2"
+            app:layout_constraintTop_toTopOf="@+id/ivProfile2" >
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/poppins_medium"
+                android:background="@color/black_20"
+                android:includeFontPadding="false"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sentIV"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/home_pic"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:shapeAppearance="@style/CornerCut"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvSendTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="@+id/messageLL2"
+            app:layout_constraintTop_toBottomOf="@+id/messageLL2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@drawable/bg_edit_text_border"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:text="Kindly ask for private photo's from other user to protect your privacy"
+        android:textSize="@dimen/_12ssp" />
+
+    <TextView
+        android:id="@+id/btnYes"
+        style="@style/ButtonStyle"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/app_color"
+        android:gravity="center"
+        android:text="@string/yes"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/btnNo"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/no"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        style="@style/ButtonStyle" />
+
+</LinearLayout>

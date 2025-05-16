@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:elevation="@dimen/_3sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Notification 01"
+                style="@style/HeadingTextView"
+                android:gravity="start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_9ssp"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <LinearLayout
+                android:id="@+id/buttonsLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMessage"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/acceptBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/HeadingTextView"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:background="@drawable/rectangular_hrey_rounded_corner_shape"
+                    android:backgroundTint="@color/green_color"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text="@string/accept"/>
+
+                <TextView
+                    android:id="@+id/rejectBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/HeadingTextView"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:background="@drawable/rectangular_hrey_rounded_corner_shape"
+                    android:backgroundTint="@color/red_color"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:text="@string/reject"/>
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="07 Oct 2024"
+                android:gravity="end"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_7ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardCv"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,181 @@
+<resources>
+    <string name="app_name">HumanMesh</string>
+    <string name="dummy_title">Lorem Ipsum Is Simply Dummy Text</string>
+    <string name="dummy_para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="english">English</string>
+    <string name="portugu_s">Português</string>
+    <string name="select_language">Select Language</string>
+    <string name="home">Home</string>
+    <string name="matched_user">Matched User</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
+    <string name="update">Update</string>
+    <string name="settings">Settings</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="my_events">My Events</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="google_ads">Google ads</string>
+    <string name="requests">Requests</string>
+    <string name="notification_rationale">Notifications permission is needed for core functionality</string>
+
+    <string-array name="settingsList">
+        <item>Notifications</item>
+        <item>Account Privacy</item>
+        <item>Subscriptions</item>
+        <item>Refer A Friend</item>
+        <item>Rewards</item>
+        <item>Privacy Policy</item>
+        <item>Terms &amp; Conditions</item>
+        <item>About Us</item>
+        <item>FAQ\'s</item>
+        <item>Contact Us</item>
+        <item>Delete Account</item>
+        <item>Log Out</item>
+    </string-array>
+    <string name="login"><b>Login</b></string>
+    <string name="continue_">Continue</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="enter_mobile_no">Enter Mobile Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_loc">Enter Location</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="enter_nick_name">Enter Nick Name</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="or_login_with">or Login With</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="register"> <u>Register</u></string>
+    <string name="verification_text"> We have sent the verification code on \nyour phone number</string>
+    <string name="forgot_password_text"> Please enter your register email id. We will \n send One Time Password on your email id.</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="send">Send</string>
+    <string name="ok">OK</string>
+    <string name="otp">OTP</string>
+    <string name="verify">Verify</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="resend_confirmation_code">Resend confirmation code</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="will_not_be_shown_on_your_profile">(will NOT be shown on your profile)</string>
+    <string name="terms_condition_text">By creating an account you have to agree with your <b><u>Terms &amp; Conditions</u></b> &amp; <b><u>Privacy Policy.</u></b></string>
+    <string name="successfully">Successfully</string>
+    <string name="successfull_text">Your account has been \ncreated Successfully.</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="subscription">Subscription</string>
+    <string name="choose_a_plan">Choose A Plan</string>
+    <string name="create_request">Create Request</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="type">Type</string>
+    <string name="real_time">Real Time</string>
+    <string name="afterwards">Afterwards</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="tags">Tags</string>
+    <string name="post">Post</string>
+    <string name="notifications">Notifications</string>
+    <string name="see_translate">See translate</string>
+    <string name="upload_images">Upload Images</string>
+    <string name="saw_you_in_starbucks">Saw you in Starbucks</string>
+    <string name="enter">Enter</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="user_descriptions">&#8226; Wearing a red scarf\n&#10;&#8226; Carrying a book\n&#10;&#8226; Having a coffee</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="detail">Detail</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="clear_all"><p><u>Clear All</u></p></string>
+    <string name="view_profile">View Profile</string>
+    <string name="do_you_want_to_show_you_profile_detail_to_this_user">Do you want to show you profile detail\nto this user?</string>
+    <string name="clear_chat">Clear Chat</string>
+    <string name="are_you_sure_want_to_clear_this_chat">Are you sure want to clear\nthis chat?</string>
+    <string name="block">Block</string>
+    <string name="are_you_sure_want_to_block_this_user">Are you sure want to block\nthis user?</string>
+    <string name="account_privacy">Account Privacy</string>
+    <string name="are_you_sure_want_to_reject_this_request">Are you sure want to \nreject this request?</string>
+    <string name="edit">Edit</string>
+    <string name="faq_s">FAQ\'s</string>
+    <string name="delete">Delete</string>
+    <string name="are_you_sure_want_to_delete_this_post">Are you sure want to delete \nthis post?</string>
+    <string name="rewards">Rewards</string>
+    <string name="logout">Logout</string>
+    <string name="are_you_sure_want_to_logout">Are you sure want to logout?</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="are_you_sure_want_to_delete_this_account">Are you sure want to delete this account?</string>
+    <string name="gender">Gender</string>
+    <string name="no">No</string>
+    <string name="not_now">Not Now</string>
+    <string name="yes">Yes</string>
+    <string name="please_enter_name">Please enter your name</string>
+    <string name="please_enter_title">Please enter the title</string>
+    <string name="please_select_image">Please select image</string>
+    <string name="please_select_start_date">Please select start date</string>
+    <string name="please_select_end_date">Please select end date</string>
+    <string name="please_select_valid_date_range">Please select valid date range</string>
+    <string name="please_select_start_time">Please select start time</string>
+    <string name="please_select_end_time">Please select end time</string>
+    <string name="please_select_valid_end_time">Please select valid end time</string>
+    <string name="please_enter_descripion">Please enter the description</string>
+    <string name="please_enter_tags">Please enter the tags</string>
+    <string name="please_enter_your_message">Please enter your message</string>
+    <string name="please_enter_nick_name">Please enter nick name</string>
+    <string name="please_enter_gender">Please select gender</string>
+    <string name="please_enter_new_password">Please enter your new password</string>
+    <string name="please_enter_conf_password">Please enter confirm password</string>
+    <string name="please_enter_dob">Please enter date of birth</string>
+    <string name="please_enter_location">Please enter location</string>
+    <string name="please_enter_valid_email">Please enter valid email</string>
+    <string name="please_enter_email">Please enter your email</string>
+    <string name="please_enter_password">Please enter your password</string>
+    <string name="phone_8_characters">Please enter valid phone number</string>
+    <string name="please_enter_phone">Please enter your phone number</string>
+    <string name="please_accept_terms">Please accept our terms &amp; conditions</string>
+    <string name="please_enter_otp">Please enter the OTP</string>
+    <string name="please_enter_4_digits_otp">Please enter 4 digits otp sent</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="enter_date_of_birth">Enter Date of Birth</string>
+<!--    <string name="map_key" translatable="false">AIzaSyBT3rWsu3t2SZm0p80zm1uijPUHuqFWo-I</string>-->
+    <string name="map_key" translatable="false">AIzaSyA9y-uhqiMLNeUZlurIT9byuvS7i7qwwPs</string>
+    <string name="password_6_characters">Please enter a password with a minimum of 6 characters</string>
+    <string name="confirm_password_same">Password and confirmation password should be the same</string>
+    <string name="cancel">Cancel</string>
+    <string name="openSettings">Open Settings</string>
+    <string name="permissionRequired">Required camera and storage permission to access this functionality.</string>
+    <string name="permission_rationale">Location permission needed for core functionality</string>
+    <string name="location_rationale">Location permission is needed for core functionality of the app to show nearby restaurants</string>
+    <string name="you_have_blocked_this_user">You have blocked this user</string>
+    <string name="you_have_been_blocked_by_this_user">You have been blocked by this user</string>
+    <string name="unblock">Unblock</string>
+    <string name="you_have_words_left">You have %1$s words left</string>
+    <string name="no_messages_found">No messages found!</string>
+    <string name="just_now">Just now</string>
+    <string name="you_have_no_words_left">You have no words left</string>
+    <string name="permission_to_show_notifications_is_not_granted">Permission to show notifications is not granted</string>
+    <string name="no_data_found">No data found!</string>
+    <string name="no_messages">No messages</string>
+    <string name="report">Report</string>
+    <string name="share_via">Share via</string>
+    <string name="check_out_this_awesome_app_use_my_code_to_sign_up_to_words_for_free">Check out this awesome app! Use my code %1$s to sign up to words for free!</string>
+    <string name="enter_referral_code">Enter Referral Code</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="are_you_sure_you_want_to_create_request">Are you sure you want to create request?</string>
+    <string name="no_matched_users_found">No matched users found!</string>
+    <string name="no_requests_found">No requests found!</string>
+    <string name="no_chats_found">No chats found!</string>
+    <string name="no_events_found">No events found!</string>
+    <string name="no_notifications_found">No notifications found!</string>
+    <string name="no_rewards_found">No rewards found!</string>
+
+
+</resources>

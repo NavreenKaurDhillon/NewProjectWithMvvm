@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolBar"
+                app:layout_constraintHeight_percent="0.38"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:background="@drawable/gray_outlined_rec">
+
+                    <TextView
+                        android:id="@+id/nameTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_percent="0.5"
+                        />
+                    <TextView
+                        android:id="@+id/userNameTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAlignment="viewEnd"
+                        style="@style/HeadingTextView"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintWidth_percent="0.5"
+                        />
+                    <TextView
+                        android:id="@+id/emailTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toBottomOf="@+id/userNameTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_percent="0.5"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        />
+
+                    <TextView
+                        android:id="@+id/userEmailTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAlignment="viewEnd"
+                        style="@style/HeadingTextView"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toTopOf="@id/emailTV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintWidth_percent="0.5" />
+                    <TextView
+                        android:id="@+id/phoneTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mobile_number"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toBottomOf="@+id/userEmailTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_percent="0.5"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/phoneLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/phoneTV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="end"
+                        app:layout_constraintWidth_percent="0.5">
+
+                        <ImageView
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:src="@drawable/flag"
+                            android:visibility="gone"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical"/>
+
+                        <TextView
+                            android:id="@+id/userPhoneTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            style="@style/HeadingTextView"
+                            android:textSize="@dimen/_10ssp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/locationTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@+id/phoneLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_percent="0.5"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        />
+                    <TextView
+                        android:id="@+id/userLocationTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAlignment="viewEnd"
+                        style="@style/HeadingTextView"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toTopOf="@id/locationTV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintWidth_percent="0.5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/editBT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ButtonStyle"
+                    android:text="@string/edit_profile"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/myEventsBT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/OutlineButtonStyle"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:text="@string/my_events"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

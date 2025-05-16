@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/baseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/popper" />
+        
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeadingTextView"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_alignTop="@id/iv_image"
+            android:layout_toRightOf="@id/iv_image"
+            android:text="@string/rewards"/>
+
+        <TextView
+            android:id="@+id/messageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_10ssp"
+            android:layout_below="@id/tv_name"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_toRightOf="@id/iv_image" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/black_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/baseLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/iconIV"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hash_icon"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+       />
+
+    <TextView
+        android:id="@+id/selectLanguageTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/HeadingTextView"
+        android:textSize="@dimen/_12ssp"
+        android:text="@string/select_language"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconIV"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/englishBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
+        android:text="@string/english"
+        android:textColor="@color/white"
+        android:layout_below="@+id/iconIV"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectLanguageTV"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/portuguesBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
+        android:textColor="@color/black"
+        android:layout_below="@id/englishBT"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/portugu_s"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/englishBT"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

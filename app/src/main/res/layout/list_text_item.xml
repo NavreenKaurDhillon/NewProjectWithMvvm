@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginVertical="@dimen/_1sdp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:src="@drawable/blue_circle"
+        android:layout_gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:text="Wearing a red scarf"/>
+</LinearLayout>

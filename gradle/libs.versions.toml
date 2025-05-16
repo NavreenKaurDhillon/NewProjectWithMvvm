@@ -1,0 +1,123 @@
+[versions]
+agp = "8.5.2"
+alerter = "7.2.4"
+androidSimpleTooltip = "1.1.0"
+blurry = "4.0.1"
+ccp = "2.7.3"
+coil = "2.5.0"
+composeBom = "2024.09.03"
+connectClient = "1.1.0-alpha10"
+converterGson = "2.9.0"
+converterScalars = "2.4.0"
+dexter = "6.2.3"
+circleimageview = "3.1.0"
+circleindicator = "2.1.6"
+compiler = "4.13.1"
+githubMaterialCalendarview = "2.0.0"
+glide = "4.13.2"
+glideTransformations = "4.3.0"
+    hiltAndroidCompiler = "2.51.1"
+kotlin = "1.9.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+kotlinxCoroutinesAndroid = "1.6.1"
+kotlinxCoroutinesAndroidVersion = "1.7.3"
+kotlinxCoroutinesCore = "1.7.3"
+lifecycleViewmodelKtx = "2.6.0-alpha01"
+material = "1.12.0"
+activity = "1.9.1"
+constraintlayout = "2.1.4"
+materialCalendarview = "2.0.0"
+materialCalendarViewVersion = "1.9.2"
+mpandroidchart = "v3.1.0"
+okhttp = "4.9.1"
+pinview = "1.4.4"
+places = "4.1.0"
+playServicesMaps = "17.0.0"
+playServicesMapsVersion = "18.1.0"
+prolificinteractiveMaterialCalendarview = "1.4.3"
+roundedimageview = "2.3.0"
+runtime = "1.5.0"
+sdpAndroid = "1.1.0"
+sspAndroid = "1.1.1"
+otpviewVersion = "3.1.0"
+dotsindicator = "5.0"
+navigationFragmentKtx = "2.7.7"
+navigationUiKtx = "2.7.7"
+navigationFragment = "2.8.0"
+stickyscrollview = "1.0.2"
+uiVersion = "1.5.0"
+viewpagerindicator = "1.0.0-alpha.1"
+playServicesFitness = "21.2.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseMessaging = "24.1.1"
+
+[libraries]
+adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "converterGson" }
+alerter = { module = "com.github.tapadoo:alerter", version.ref = "alerter" }
+android-simple-tooltip = { module = "com.github.douglasjunior:android-simple-tooltip", version.ref = "androidSimpleTooltip" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-connect-client = { module = "androidx.health.connect:connect-client", version.ref = "connectClient" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "runtime" }
+blurry = { module = "jp.wasabeef:blurry", version.ref = "blurry" }
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+circleindicator = { module = "me.relex:circleindicator", version.ref = "circleindicator" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "converterScalars" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-transformations = { module = "jp.wasabeef:glide-transformations", version.ref = "glideTransformations" }
+gms-play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMapsVersion" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidCompiler" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-android-v173 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroidVersion" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material-calendar-view = { module = "com.applandeo:material-calendar-view", version.ref = "materialCalendarViewVersion" }
+material-calendarview = { module = "com.prolificinteractive:material-calendarview", version.ref = "prolificinteractiveMaterialCalendarview" }
+material-calendarview-v201 = { module = "com.github.prolificinteractive:material-calendarview", version.ref = "githubMaterialCalendarview" }
+mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+pinview = { module = "io.github.chaosleung:pinview", version.ref = "pinview" }
+places = { module = "com.google.android.libraries.places:places", version.ref = "places" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesMaps" }
+play-services-maps-v1700 = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
+play-services-places = { module = "com.google.android.gms:play-services-places", version.ref = "playServicesMaps" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converterGson" }
+roundedimageview = { module = "com.makeramen:roundedimageview", version.ref = "roundedimageview" }
+sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpAndroid" }
+ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "sspAndroid" }
+dotsindicator = { module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator" }
+ccp = { module = "com.hbb20:ccp", version.ref = "ccp" }
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+dexter = { module = "com.karumi:dexter", version.ref = "dexter" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+android-otpview-pinview-otpview = { module = "com.github.mukeshsolanki.android-otpview-pinview:otpview", version.ref = "otpviewVersion" }
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+stickyscrollview = { module = "com.github.amarjain07:StickyScrollView", version.ref = "stickyscrollview" }
+ui = { module = "androidx.compose.ui:ui", version.ref = "uiVersion" }
+viewpagerindicator = { module = "io.github.vejei.viewpagerindicator:viewpagerindicator", version.ref = "viewpagerindicator" }
+play-services-fitness = { group = "com.google.android.gms", name = "play-services-fitness", version.ref = "playServicesFitness" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBar"
+            android:paddingBottom="@dimen/_15sdp"
+           >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_25sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/name"
+                    style="@style/HeadingTextView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_name"
+                    android:singleLine="true"
+                    android:maxLength="25"
+                    style="@style/EditTextStyle"
+                    android:imeOptions="actionNext"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvName"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/email"
+                    style="@style/HeadingTextView"
+                    app:layout_constraintTop_toBottomOf="@id/etName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_email"
+                    android:singleLine="true"
+                    android:maxLength="35"
+                    style="@style/EditTextStyle"
+                    android:imeOptions="actionNext"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmail"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/mobile_no"
+                    style="@style/HeadingTextView"
+                    app:layout_constraintTop_toBottomOf="@id/etEmail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rlMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/bg_edit_text_border"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPhone">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/country_picker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-4dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start"
+                        app:ccpDialog_backgroundColor="@color/white"
+                        app:ccpDialog_keyboardAutoPopup="false"
+                        app:ccpDialog_textColor="@color/black"
+                        app:ccp_arrowColor="@color/black"
+                        app:ccp_autoDetectCountry="false"
+                        app:ccp_contentColor="@color/black"
+                        app:ccp_defaultPhoneCode="1"
+                        app:ccp_showArrow="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="true"
+                        app:ccp_textSize="@dimen/_11sdp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/country_picker"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/enter_mobile_no"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="12"                        style="@style/EditTextStyle"
+                        />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Message"
+                    style="@style/HeadingTextView"
+                    app:layout_constraintTop_toBottomOf="@id/rlMobile"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110sdp"
+                    android:hint="Write"
+                    android:gravity="start"
+                    android:inputType="text"
+                    style="@style/EditTextStyle"
+                    android:imeOptions="actionDone"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMessage"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submitBT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Submit"
+                    android:layout_marginHorizontal="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    style="@style/ButtonStyle"
+                    android:layout_marginTop="@dimen/_20sdp"
+                  />
+
+            </LinearLayout>
+        </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/blue_curved_bottom_bg"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userImageIV"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/gray_male"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:shapeAppearance="@style/Circle"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_32sdp"/>
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:layout_alignEnd="@id/bannerIV"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_32sdp">
+            <TextView
+                android:id="@+id/nameTextTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Hello! Sophia"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppins_medium"
+                />
+            <ImageView
+                android:id="@+id/locationIV"
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/location_gray"
+                android:layout_below="@id/nameTextTV"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:tint="@color/white_50" />
+            <TextView
+                android:id="@+id/locTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/locationIV"
+                android:layout_below="@id/nameTextTV"
+                android:text="Arizona, USA"
+                android:singleLine="false"
+                android:layout_toStartOf="@+id/notificationsLayout"
+                android:textColor="@color/white_50"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_alignBottom="@id/locationIV"
+                android:layout_alignTop="@id/locationIV"
+                android:textSize="@dimen/_9ssp"/>
+
+            <RelativeLayout
+                android:id="@+id/notificationsLayout"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_4sdp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/white_transparent_bg">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notifications"
+                    android:fontFamily="@font/poppins"
+                    android:layout_centerVertical="true"
+                    style="@style/HeadingTextView"
+                    android:textSize="@dimen/_8ssp"
+                    android:layout_toStartOf="@id/notificationsIV"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/notificationsIV"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/notifications_icn"
+                    android:backgroundTint="@color/white"
+                    android:elevation="@dimen/_3sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/blue_circle"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:src="@drawable/home_pic"
+            android:background="@color/black"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_marginVertical="@dimen/_15sdp"
+            app:shapeAppearance="@style/CornerCut"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_below="@id/userImageIV"/>
+
+        <RelativeLayout
+            android:id="@+id/bannerIV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_below="@id/topLayout">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.zhpan.indicator.IndicatorView
+                android:id="@+id/indicatorView"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:elevation="@dimen/_3sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_12sdp"
+                />
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bannerIV">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/adViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/adLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/ad_green_bg"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/googleAdIV"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/google_ad_icon"/>
+         <ImageView
+                android:id="@+id/closeIv"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/close_icon"
+             android:layout_alignParentEnd="true"/>
+    <ImageView
+                android:id="@+id/playIv"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/play_icon"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+            android:layout_toStartOf="@id/closeIv"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/HeadingTextView"
+                android:text="@string/google_ads"
+                android:textColor="@color/black_50"
+                android:layout_toStartOf="@id/playIv"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/googleAdIV"/>
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:layout_below="@id/googleAdIV"
+                android:textSize="@dimen/_9ssp"
+                android:includeFontPadding="false"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:text="Easy To Earn Money From Your Content"
+                />
+   <TextView
+                android:id="@+id/descriptionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black_50"
+                android:layout_below="@id/titleTV"
+                android:textSize="@dimen/_9ssp"
+       android:includeFontPadding="false"
+                android:text="@string/dummy_para"
+       />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/requestsRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeadingTextView"
+                android:text="@string/requests"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <ImageView
+                android:id="@+id/addBT"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/add_icon"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/noDataTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_40sdp"
+            android:text="@string/no_requests_found"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/requestsRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_15sdp"
+            tools:listitem="@layout/request_item"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.live.humanmesh.view.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/matchedUserFragment"
+        android:name="com.live.humanmesh.view.fragment.MatchedUserFragment"
+        android:label="MatchedUserFragment"
+        tools:layout="@layout/fragment_matched_user">
+        <action
+            android:id="@+id/matched_fragment_to_user_chat"
+            app:destination="@id/userChatFragment"
+            app:popUpTo="@id/matchedUserFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.live.humanmesh.view.fragment.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/chat_fragment_to_user_chat"
+            app:destination="@id/userChatFragment"
+            app:popUpTo="@id/chatFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.live.humanmesh.view.fragment.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.live.humanmesh.view.fragment.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+    <fragment
+        android:id="@+id/createRequestFragment"
+        android:name="com.live.humanmesh.view.fragment.CreateRequestFragment"
+        android:label="CreateRequestFragment"
+        tools:layout="@layout/fragment_create_request"/>
+    <fragment
+        android:id="@+id/subscriptionFragment"
+        android:name="com.live.humanmesh.view.fragment.SubscriptionFragment"
+        android:label="SubscriptionFragment"
+        tools:layout="@layout/fragment_subscription"/>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.live.humanmesh.view.fragment.DetailsFragment"
+        android:label="DetailsFragment"
+       />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.live.humanmesh.view.fragment.NotificationFragment"
+        android:label="NotificationsFragment"
+        tools:layout="@layout/fragment_notifications"/>
+    <fragment
+        android:id="@+id/myEventsFragment"
+        android:name="com.live.humanmesh.view.fragment.MyEventsFragment"
+        android:label="MyEventsFragment" >
+        <action
+            android:id="@+id/my_event_fragment_to_edit_event"
+            app:popUpTo="@id/myEventsFragment"
+            app:popUpToInclusive="false"
+            app:destination="@+id/editEventFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/accountPrivacyFragment"
+        android:name="com.live.humanmesh.view.fragment.AccountPrivacyFragment"
+        android:label="AccountPrivacyFragment" />
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.live.humanmesh.view.fragment.FaqFragment"
+        android:label="FaqFragment" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.live.humanmesh.view.fragment.PrivacyPolicyFragment"
+        android:label="PrivacyPolicyFragment" />
+    <fragment
+        android:id="@+id/rewardsFragment"
+        android:name="com.live.humanmesh.view.fragment.RewardsFragment"
+        android:label="RewardsFragment" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.live.humanmesh.view.fragment.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile"/>
+    <fragment
+        android:id="@+id/userChatFragment"
+        android:name="com.live.humanmesh.view.fragment.UserChatFragment"
+        android:label="userChatFragment"
+        tools:layout="@layout/activity_chat"/>
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.live.humanmesh.view.fragment.ContactUsFragment"
+        android:label="ContactUsFragment" />
+    <fragment
+        android:id="@+id/editEventFragment"
+        android:name="com.live.humanmesh.view.fragment.EditEventFragment"
+        android:label="EditEventFragment" />
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.live.humanmesh.view.fragment.UserDetailFragment"
+        android:label="UserDetailFragment" />
+
+</navigation>

@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HumanMesh" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.HumanMesh" parent="Base.Theme.HumanMesh" />
+    <style name="Theme.RemoveSplashScreenTheme" parent="Base.Theme.HumanMesh">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="AlertTextAppearanceTitle">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+    <style name="AlertTextAppearanceText">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+
+
+</resources>

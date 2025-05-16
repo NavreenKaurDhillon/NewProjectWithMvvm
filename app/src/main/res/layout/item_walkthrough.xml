@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_20sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gray_bg">
+    
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_190sdp"
+        android:layout_height="@dimen/_190sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/tutorial1"/>
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="@dimen/_14ssp"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/black"
+        android:text="@string/dummy_title"/>
+
+ <TextView
+     android:id="@+id/descriptionTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/titleTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_11ssp"
+        android:textAlignment="center"
+     android:layout_marginTop="@dimen/_12sdp"
+        android:textColor="@color/black_40"
+        android:text="@string/dummy_para"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

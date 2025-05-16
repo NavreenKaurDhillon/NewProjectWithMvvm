@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/gray_male"
+        app:shapeAppearance="@style/Circle"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/white"
+        android:elevation="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        />
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/_20sdp">
+       <TextView
+           android:id="@+id/nameTV"
+           style="@style/HeadingTextView"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="@dimen/_20sdp"
+           android:layout_marginTop="@dimen/_6sdp"
+           android:textSize="@dimen/_13ssp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+       <TextView
+           android:id="@+id/nickNameTV"
+           style="@style/HeadingTextView"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="@dimen/_20sdp"
+           android:layout_marginTop="@dimen/_6sdp"
+           android:textColor="@color/black_80"
+           android:textSize="@dimen/_12ssp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+       <TextView
+           android:id="@+id/realTimeTV"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="@dimen/_20sdp"
+           android:layout_marginTop="@dimen/_2sdp"
+           android:fontFamily="@font/poppins_semibold"
+           android:text="@string/real_time"
+           android:visibility="gone"
+           android:textColor="@color/app_color"
+           android:textSize="@dimen/_9ssp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/nickNameTV" />
+
+       <ImageView
+           android:id="@+id/locationIV"
+           android:layout_width="@dimen/_8sdp"
+           android:layout_height="@dimen/_8sdp"
+           android:src="@drawable/location_gray"
+           app:layout_constraintStart_toStartOf="@id/nameTV"
+           app:layout_constraintTop_toTopOf="@id/locationTV"
+           app:layout_constraintBottom_toBottomOf="@id/locationTV"
+           app:tint="@color/black_80" />
+
+       <TextView
+           android:id="@+id/locationTV"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="@dimen/_12sdp"
+           android:layout_marginTop="@dimen/_6sdp"
+           android:layout_marginEnd="@dimen/_20sdp"
+           android:fontFamily="@font/poppins"
+           android:includeFontPadding="false"
+           android:textColor="@color/black_80"
+           android:textSize="@dimen/_10ssp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="@id/nameTV"
+           app:layout_constraintTop_toBottomOf="@id/realTimeTV" />
+
+       <ImageView
+           android:id="@+id/clockIV"
+           android:layout_width="@dimen/_8sdp"
+           android:layout_height="@dimen/_8sdp"
+           android:src="@drawable/baseline_phone_24"
+           app:layout_constraintStart_toStartOf="@id/nameTV"
+           app:layout_constraintTop_toTopOf="@id/timeTV"
+           app:layout_constraintBottom_toBottomOf="@id/timeTV"
+           app:tint="@color/black_80" />
+
+       <TextView
+           android:id="@+id/timeTV"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="@dimen/_12sdp"
+           android:layout_marginEnd="@dimen/_20sdp"
+           android:fontFamily="@font/poppins"
+           android:includeFontPadding="false"
+           android:layout_marginTop="@dimen/_6sdp"
+           android:textColor="@color/black_80"
+           android:textSize="@dimen/_10ssp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="@id/nameTV"
+           app:layout_constraintTop_toBottomOf="@id/locationTV" />
+
+       <ImageView
+           android:id="@+id/calendarIV"
+           android:layout_width="@dimen/_8sdp"
+           android:layout_height="@dimen/_8sdp"
+           android:src="@drawable/calendar_gray"
+           android:visibility="gone"
+           app:layout_constraintStart_toStartOf="@id/nameTV"
+           app:layout_constraintTop_toTopOf="@id/dateTV"
+           app:layout_constraintBottom_toBottomOf="@id/dateTV"
+           app:tint="@color/black_80" />
+
+       <TextView
+           android:id="@+id/dateTV"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="@dimen/_12sdp"
+           android:fontFamily="@font/poppins"
+           android:includeFontPadding="false"
+           android:layout_marginTop="@dimen/_6sdp"
+           android:textColor="@color/black_80"
+           android:visibility="gone"
+           android:textSize="@dimen/_10ssp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="@id/nameTV"
+           app:layout_constraintTop_toBottomOf="@id/timeTV" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

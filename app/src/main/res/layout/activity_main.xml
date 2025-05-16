@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".view.activity.HomeActivity">
+
+ <!--  <data>
+
+   </data>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:id="@+id/containerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottonNavLayout"
+            app:navGraph ="@navigation/main_nav_graph" />
+
+       <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_nav_menu"
+            android:visibility="gone"
+            app:itemTextAppearanceActive="@style/BottomNavActiveTextStyle"
+            app:itemTextColor="@color/bottom_nav_item_color"/>
+-->
+        <LinearLayout
+            android:id="@+id/bottonNavLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:elevation="@dimen/_6sdp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:weightSum="5">
+            <LinearLayout
+                android:id="@+id/homeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/homeIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_icon"
+                    app:tint="@color/app_color" />
+                <TextView
+                    android:id="@+id/homeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    style="@style/BottomNavActiveTextStyle"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/matchedUserLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/matchedUserIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/matched_user_con"/>
+                <TextView
+                    android:id="@+id/matchedUserText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/matched_user"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    style="@style/BottomNavActiveTextStyle"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/chatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/chatIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chat_icon"/>
+                <TextView
+                    android:id="@+id/chatText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    style="@style/BottomNavActiveTextStyle"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/profileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/profileIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile_icon"/>
+                <TextView
+                    android:id="@+id/profileText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    style="@style/BottomNavActiveTextStyle"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/settingsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/settingsIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settings_icon"/>
+                <TextView
+                    android:id="@+id/settingsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    style="@style/BottomNavActiveTextStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.AccountPrivacyFragment">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintBottom_toTopOf="@+id/saveBT">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/scroll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/bg_white_corners_15"
+            android:elevation="@dimen/_2sdp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Account Public"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_11sdp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            />
+
+
+            <ToggleButton
+                android:id="@+id/switchCompat1"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/toggle_button"
+                android:checked="true"
+                android:visibility="visible"
+                android:textOff=""
+                android:textOn=""
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:background="@drawable/bg_white_corners_15"
+            android:elevation="@dimen/_2sdp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Adjustable Profile Visibility"
+                android:padding="@dimen/_12sdp"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                />
+
+            <ImageView
+                android:id="@+id/iv_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/drop_down"/>
+
+            <ImageView
+                android:id="@+id/iv_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:src="@drawable/up_arrow"/>
+
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_photo"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:backgroundTint="@color/light_white"
+                android:background="@drawable/bg_white_corners_15"
+                android:elevation="@dimen/_2sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Photo Visibility"
+                    android:textSize="@dimen/_11sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"
+                    />
+
+                <ToggleButton
+                    android:id="@+id/photoSwitchCompat"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/toggle_button"
+                    android:checked="true"
+                    android:visibility="visible"
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:background="@drawable/bg_white_corners_15"
+                android:elevation="@dimen/_2sdp"
+                android:backgroundTint="@color/light_white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Event Details"
+                    android:padding="@dimen/_12sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"
+                    />
+
+                <ToggleButton
+                    android:id="@+id/eventSwitchCompat"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/toggle_button"
+                    android:checked="true"
+                    android:visibility="visible"
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:background="@drawable/bg_white_corners_15"
+                android:elevation="@dimen/_2sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/light_white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Interests"
+                    android:padding="@dimen/_12sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"
+                    />
+
+                <ToggleButton
+                    android:id="@+id/interestSwitchCompat"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/toggle_button"
+                    android:checked="true"
+                    android:visibility="visible"
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        
+        
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/bg_white_corners_15"
+            android:elevation="@dimen/_2sdp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nick Name Show on Profile"
+                android:padding="@dimen/_12sdp"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                />
+
+            <ToggleButton
+                android:id="@+id/switchCompat"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/toggle_button"
+                android:checked="true"
+                android:visibility="visible"
+                android:textOff=""
+                android:textOn=""
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/saveBT"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+    android:text="@string/save"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="@dimen/_20sdp"
+    style="@style/ButtonStyle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/walkthroughFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.live.humanmesh.view.fragment.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.live.humanmesh.view.fragment.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.live.humanmesh.view.fragment.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password"/>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.live.humanmesh.view.fragment.VerificationFragment"
+        android:label="VerificationFragment"
+        tools:layout="@layout/fragment_verification"/>
+    <fragment
+        android:id="@+id/selectLanguageFragment"
+        android:name="com.live.humanmesh.view.fragment.SelectLanguageFragment"
+        android:label="SelectLanguageFragment"
+        tools:layout="@layout/fragment_select_language">
+        <action
+            android:id="@+id/action_selectLanguageFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walkthroughFragment"
+        android:name="com.live.humanmesh.view.fragment.WalkthroughFragment"
+        android:label="WalkthroughFragment"
+        tools:layout="@layout/fragment_walkthrough">
+
+        <action
+            android:id="@+id/action_walkthroughFragment_to_selectLanguageFragment"
+            app:destination="@id/selectLanguageFragment" />
+    </fragment>
+
+</navigation>

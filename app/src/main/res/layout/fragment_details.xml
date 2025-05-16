@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bannerIV"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_15sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:shapeAppearance="@style/CornerCut" />
+
+    <TextView
+        android:id="@+id/nameTV"
+        style="@style/HeadingTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerIV" />
+
+    <TextView
+        android:id="@+id/nickNameTV"
+        style="@style/HeadingTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+    <TextView
+        android:id="@+id/realTimeTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickNameTV" />
+
+    <ImageView
+        android:id="@+id/locationIV"
+        android:layout_width="@dimen/_8sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:src="@drawable/location_gray"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toTopOf="@id/locationTV"
+        app:layout_constraintBottom_toBottomOf="@id/locationTV"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/locationTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/poppins"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toBottomOf="@id/realTimeTV" />
+
+    <ImageView
+        android:id="@+id/clockIV"
+        android:layout_width="@dimen/_8sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:src="@drawable/clock_gray"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toTopOf="@id/timeTV"
+        app:layout_constraintBottom_toBottomOf="@id/timeTV"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/poppins"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toBottomOf="@id/locationTV" />
+
+    <ImageView
+        android:id="@+id/calendarIV"
+        android:layout_width="@dimen/_8sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:src="@drawable/calendar_gray"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toTopOf="@id/dateTV"
+        app:layout_constraintBottom_toBottomOf="@id/dateTV"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/dateTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:fontFamily="@font/poppins"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toBottomOf="@id/timeTV" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:includeFontPadding="false"
+        android:textColor="@color/black_70"
+        android:textSize="@dimen/_9ssp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toBottomOf="@id/dateTV" />
+
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppins"
+        android:includeFontPadding="false"
+        android:textColor="@color/black_70"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+    <TextView
+        android:id="@+id/tagsTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppins"
+        android:includeFontPadding="false"
+        android:text=""
+        android:textColor="@color/black_70"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/textRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        tools:itemCount="3"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@id/nameTV"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTV"
+        tools:listitem="@layout/list_text_item" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chatBT"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/chat"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagsTV" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acceptBT"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:backgroundTint="@color/green"
+        android:text="Accept"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagsTV"
+        app:layout_constraintWidth_percent="0.42" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rejectBT"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:backgroundTint="@color/red"
+        android:text="Reject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagsTV"
+        app:layout_constraintWidth_percent="0.42" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

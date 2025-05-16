@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_2sdp"
+    android:layout_marginVertical="@dimen/_6sdp"
+    android:elevation="@dimen/_2sdp"
+    android:background="@drawable/gray_outlined_rec"
+    android:padding="@dimen/_10sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFaq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:text="Question"
+        style="@style/HeadingTextView"
+        app:layout_constraintEnd_toStartOf="@id/ivDropAns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivDropAns"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@id/tvFaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvFaq" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivUpAns"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:src="@drawable/baseline_minimize_24"
+        app:layout_constraintBottom_toBottomOf="@id/tvFaq"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvFaq" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFaqAns"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black_50"
+        android:textSize="@dimen/_9sdp"
+        android:visibility="gone"
+        android:text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet "
+        app:layout_constraintEnd_toStartOf="@id/ivDropAns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFaq" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

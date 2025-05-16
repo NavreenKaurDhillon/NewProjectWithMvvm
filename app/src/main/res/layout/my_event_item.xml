@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layoutCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvReal"
+        android:elevation="@dimen/_6sdp"
+        app:cardCornerRadius="@dimen/_6sdp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userImageIV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_pic"
+                app:layout_constraintBottom_toBottomOf="@+id/textRV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameTV"
+                app:layout_constraintWidth_percent="0.4"
+                app:shapeAppearance="@style/CornerCut" />
+
+            <TextView
+                android:id="@+id/nameTV"
+                style="@style/HeadingTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:singleLine="false"
+                android:text="L****i"
+                app:layout_constraintEnd_toStartOf="@+id/ivMenu"
+                app:layout_constraintStart_toEndOf="@+id/userImageIV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameTV"
+                android:src="@drawable/more" />
+            <ImageView
+                android:id="@+id/locationIV"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:src="@drawable/location_gray"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toTopOf="@id/locationTV"
+                app:layout_constraintBottom_toBottomOf="@id/locationTV"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/locationTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="-1dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="1260 6th Ave, New York City, NY"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toBottomOf="@id/nameTV" />
+
+            <ImageView
+                android:id="@+id/clockIV"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:src="@drawable/clock_gray"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toTopOf="@id/timeTV"
+                app:layout_constraintBottom_toBottomOf="@id/timeTV"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="10:00AM - 10:00PM"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toBottomOf="@id/locationTV" />
+
+            <ImageView
+                android:id="@+id/calendarIV"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:src="@drawable/calendar_gray"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toTopOf="@id/dateTV"
+                app:layout_constraintBottom_toBottomOf="@id/dateTV"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="20 Dec 2024"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toBottomOf="@id/timeTV" />
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="Saw you in Starbucks"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toBottomOf="@id/dateTV" />
+
+            <TextView
+                android:id="@+id/descriptionTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:text="You were sitting in front of me with your friends. You had a white blouse and red scarf."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/textRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toBottomOf="@id/descriptionTV"
+                tools:itemCount="3"
+                tools:listitem="@layout/list_text_item" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buttonsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toBottomOf="@id/textRV">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

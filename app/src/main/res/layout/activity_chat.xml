@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.UserChatFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="19dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back_blue" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_toEndOf="@id/ivBack"
+            android:layout_toStartOf="@id/ivUserView"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+
+        <ImageView
+            android:id="@+id/ivUserView"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_toStartOf="@id/ivMenu"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/user_view" />
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Available Words : "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp" />
+        <TextView
+            android:id="@+id/wordsCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8ssp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height='1dp'
+        android:layout_marginVertical="@dimen/_7sdp"
+        android:background="@color/border_bg_color"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/noDataTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_50sdp"
+        android:text="@string/no_messages_found"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:fontFamily="@font/poppins_medium"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:itemCount="2"
+        tools:layout_editor_absoluteX="10dp"
+        tools:listitem="@layout/item_chat_list" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:backgroundTint="#F0EBEB"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/bg_edit_text_border"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/poppins"
+            android:text="• Gain free words to chat through looking Google adds (5 words per add)"
+            android:textColor="@color/black_50"
+            android:textSize="@dimen/_7sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/poppins"
+            android:text="• Share the app with 20 persons and gain 50 words for chat"
+            android:textColor="@color/black_50"
+            android:textSize="@dimen/_7sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/poppins"
+            android:text="• Subscribe if you want to buy words without looking Google adds"
+            android:textColor="@color/black_50"
+            android:textSize="@dimen/_7sdp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/blockTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="you have been blocked "
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_medium"
+            style="@style/HeadingTextView"/>
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_5sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <EditText
+                android:id="@+id/messageET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Type here..."
+                android:textSize="@dimen/_12ssp"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/ivGallery"/>
+
+            <ImageView
+                android:id="@+id/ivGallery"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/image_gallery"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@id/btnSend"/>
+            <ImageView
+                android:id="@+id/btnSend"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:src="@drawable/btn_send"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

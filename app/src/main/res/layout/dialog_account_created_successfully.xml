@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clMain"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:elevation="@dimen/_4sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_16sdp"
+        android:background="@drawable/bg_white_corners_21"
+        android:layout_alignParentBottom="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_tick_blue"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:gravity="center"
+        android:layout_below="@+id/ivLogo"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/successfully"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHeading"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:text="@string/successfull_text"
+        android:textColor="@color/black_40"
+        android:textSize="@dimen/_12sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/okBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ok"
+        android:paddingHorizontal="@dimen/_45sdp"
+        style="@style/ButtonStyleTextView"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="@dimen/_25sdp"
+        />
+
+</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "622039369275",
+    "project_id": "human-mesh",
+    "storage_bucket": "human-mesh.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622039369275:android:8904d3d289754e562afe1e",
+        "android_client_info": {
+          "package_name": "com.live.humanmesh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622039369275-7ih3p3ahht1ra3hmr6msbnj7tj8ui8mh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.live.humanmesh",
+            "certificate_hash": "6a044ff7b18bd19b03e31734b061a63f44407ab6"
+          }
+        },
+        {
+          "client_id": "622039369275-nvcdob3o84kq6umv06256ae7m1q9704g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ3GuWp3Y6vER44ng6veEmPoNEsnamcm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622039369275-nvcdob3o84kq6umv06256ae7m1q9704g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
